@@ -9,5 +9,8 @@ RUN wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | apt-key add -
 RUN apt-get update
 RUN apt-get install -y rethinkdb
 
+RUN npm install --unsafe-perm
+
+
 
 
