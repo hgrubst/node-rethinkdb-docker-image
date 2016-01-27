@@ -4,7 +4,6 @@
   "description": "Npm dependencies for atc",
   "license": "UNLICENSED",
   "scripts": {
-    "install": "jspm config registries.github.remote https://github.jspm.io && jspm config registries.github.auth Y3VyM240Oktha290YTAx && jspm config registries.github.maxRepoSize 0 && jspm config registries.github.handler jspm-github && jspm update --yes"
   },
   "repository": {
     "type": "git",
@@ -72,12 +71,13 @@
     "node-uuid": "^1.4.7",
     "typescript": "^1.8.0-dev.20151105",
     "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "clean-css": "npm:clean-css@^3.4.8",
-      "core-js": "npm:core-js@^1.1.4",
-      "typescript": "npm:typescript@^1.8.0-dev.20151105"    
+    "babel-runtime": "npm:babel-runtime@^5.8.24",
+    "clean-css": "npm:clean-css@^3.4.8",
+    "core-js": "npm:core-js@^1.1.4",
+    "typescript": "npm:typescript@^1.8.0-dev.20151105",
+    "jspm": "^0.16.15"
   },
-"jspm": {
+  "jspm": {
     "directories": {
       "baseURL": "public"
     },

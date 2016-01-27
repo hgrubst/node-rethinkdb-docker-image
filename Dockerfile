@@ -1,5 +1,6 @@
 FROM node:5.5-wheezy
 
+
 #install lsb-release
 RUN apt-get update && apt-get install -y lsb-release
 
@@ -9,6 +10,9 @@ RUN wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | apt-key add -
 RUN apt-get update
 RUN apt-get install -y rethinkdb
 
+ADD . /tmp
+
+WORKDIR /tmp
 RUN npm install --unsafe-perm
 
 
