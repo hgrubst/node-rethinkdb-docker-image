@@ -1,6 +1,6 @@
 FROM nodesource/trusty:5.7.1
 
-apt-get install wget
+RUN apt-get install wget
 
 #install rethinkdb
 RUN echo "deb http://download.rethinkdb.com/apt trusty main" | tee /etc/apt/sources.list.d/rethinkdb.list
