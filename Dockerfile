@@ -1,4 +1,4 @@
-FROM node:5.5-wheezy
+FROM nodesource/trusty:5.7.1
 
 
 #install lsb-release
