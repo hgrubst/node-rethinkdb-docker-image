@@ -1,4 +1,4 @@
-FROM nodesource/trusty:5.7.1
+FROM nodesource/trusty:5.9.1
 
 #install rethinkdb
 RUN echo "deb http://download.rethinkdb.com/apt trusty main" | tee /etc/apt/sources.list.d/rethinkdb.list
