@@ -7,5 +7,5 @@ RUN apt-get update
 RUN apt-get install -y rethinkdb
 
 #install rabbitmq and redis (how to start the services and actually use them?)
-RUN apt-get install -y rabbitmq-server redis-server
+RUN apt-get install -y rabbitmq-server=3.6.1 redis-server
 
