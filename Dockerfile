@@ -1,4 +1,4 @@
-FROM nodesource/trusty:6
+FROM node:7.3
 
 #install rethinkdb
 RUN echo "deb http://download.rethinkdb.com/apt trusty main" | tee /etc/apt/sources.list.d/rethinkdb.list
@@ -24,9 +24,9 @@ RUN apt-get install -y rethinkdb
 #install yarn
 RUN apt-get install -y yarn
 
-#install rabbitmq 
-RUN apt-get install -y rabbitmq-server 
+#install rabbitmq
+RUN apt-get install -y rabbitmq-server
 
-#install redis 
+#install redis
 RUN apt-get install -y redis-server
 
