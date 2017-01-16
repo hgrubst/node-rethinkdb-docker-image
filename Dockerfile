@@ -13,10 +13,11 @@ RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
 # Add the latest stable redis ppa.
-RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:chris-lea/redis-server
 
 RUN apt-get update
+
+RUN apt-get install -y software-properties-common
 
 #install rethinkdb
 RUN apt-get install -y rethinkdb
