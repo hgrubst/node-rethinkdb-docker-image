@@ -1,7 +1,7 @@
 FROM node:7.3
 
 #install rethinkdb
-RUN echo "deb http://download.rethinkdb.com/apt trusty main" | tee /etc/apt/sources.list.d/rethinkdb.list
+RUN echo "deb http://download.rethinkdb.com/apt `lsb_release -cs` main" | tee /etc/apt/sources.list.d/rethinkdb.list
 RUN curl https://download.rethinkdb.com/apt/pubkey.gpg | apt-key add -
 
 #install rabbitmq
