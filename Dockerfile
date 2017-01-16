@@ -16,11 +16,11 @@ RUN apt-get update
 
 # Add the latest stable redis ppa.
 RUN apt-get install -y -qq python-software-properties
+RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:chris-lea/redis-server
 
 RUN apt-get update
 
-RUN apt-get install -y software-properties-common
 
 #install rethinkdb
 RUN apt-get install -y rethinkdb
