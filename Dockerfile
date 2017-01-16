@@ -12,7 +12,10 @@ RUN curl https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | apt-key add
 RUN echo "deb http://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
+RUN apt-get update
+
 # Add the latest stable redis ppa.
+RUN apt-get install -y -qq python-software-properties
 RUN add-apt-repository ppa:chris-lea/redis-server
 
 RUN apt-get update
