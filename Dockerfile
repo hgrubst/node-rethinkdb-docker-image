@@ -1,4 +1,4 @@
-FROM node:7.3
+FROM node:8.2
 
 #install rethinkdb
 RUN echo "deb http://download.rethinkdb.com/apt jessie main" | tee /etc/apt/sources.list.d/rethinkdb.list
