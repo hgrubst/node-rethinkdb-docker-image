@@ -43,6 +43,9 @@ RUN apt-get install -y rabbitmq-server
 #install redis
 RUN apt-get install -y redis-server
 
-#create test vhost
+# Start rabbitmq to add the default vhost
+RUN service rabbitmq-server start
+
+# Create test vhost
 RUN rabbitmqctl add_vhost test
 RUN rabbitmqctl set_permissions -p test guest ".*" ".*" ".*"
