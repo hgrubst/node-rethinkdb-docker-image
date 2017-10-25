@@ -43,3 +43,6 @@ RUN apt-get install -y rabbitmq-server
 #install redis
 RUN apt-get install -y redis-server
 
+#create test vhost
+RUN rabbitmqctl add_vhost test
+RUN rabbitmqctl set_permissions -p test guest ".*" ".*" ".*"
