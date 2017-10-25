@@ -40,12 +40,6 @@ RUN apt-get install -y yarn
 #install rabbitmq
 RUN apt-get install -y rabbitmq-server
 
-# Start rabbitmq to add the default vhost (give it time to start so that we can add the vhost)
-RUN service rabbitmq-server start
-
 #install redis
 RUN apt-get install -y redis-server
 
-# Create test vhost
-RUN rabbitmqctl add_vhost test
-RUN rabbitmqctl set_permissions -p test guest ".*" ".*" ".*"
