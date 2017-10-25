@@ -31,6 +31,9 @@ RUN apt-get update
 #install rethinkdb
 RUN apt-get install -y rethinkdb
 
+# Create the default rethinkdb configuration to startit with init.d
+RUN cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
+
 #install yarn
 RUN apt-get install -y yarn
 
@@ -39,4 +42,13 @@ RUN apt-get install -y rabbitmq-server
 
 #install redis
 RUN apt-get install -y redis-server
+
+# Start rabbitmq
+RUN service rabbitmq-server start
+
+# Start redis
+RUN service redis-server start
+
+# Start redis
+RUN /etc/init.d/rethinkdb restart
 
