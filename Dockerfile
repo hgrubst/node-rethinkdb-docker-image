@@ -31,8 +31,8 @@ RUN apt-get update
 #install rethinkdb
 RUN apt-get install -y rethinkdb
 
-# Create the default rethinkdb configuration to startit with init.d
-RUN cp /etc/rethinkdb/default.conf.sample /etc/rethinkdb/instances.d/instance1.conf
+# Copy the rethinkdb configuration to start it with init.d
+ADD rethinkdb.conf /etc/rethinkdb/instances.d/instance1.conf
 
 #install yarn
 RUN apt-get install -y yarn
