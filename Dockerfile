@@ -43,4 +43,3 @@ RUN apt-get install -y rabbitmq-server
 #install redis
 RUN apt-get install -y redis-server
 
-ENTRYPOINT service rabbitmq-server start && service redis-server start && /etc/init.d/rethinkdb restart && /bin/bash
