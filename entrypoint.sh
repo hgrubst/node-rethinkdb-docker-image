@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #start rabbitmq
-rabbitmq-server start; 
+service rabbitmq-server start; 
 rabbitmqctl add_vhost test;
 
 #start rethinkdb
