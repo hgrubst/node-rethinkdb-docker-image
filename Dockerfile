@@ -15,9 +15,8 @@ RUN echo 'deb-src http://ftp.utexas.edu/dotdeb/ stable all'  >> /etc/apt/sources
 # Add the latest stable redis ppa.
 #RUN apt-get install -y -qq python-software-properties
 # RUN add-apt-repository ppa:chris-lea/redis-server
-RUN apt-get install -y software-properties-common
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y yarn rabbitmq-server rethinkdb redis-server
+RUN apt-get update && apt-get upgrade -y && apt-get install -y software-properties-common yarn rabbitmq-server rethinkdb redis-server 
 
 # Copy the rethinkdb configuration to start it with init.d
 ADD rethinkdb.conf /etc/rethinkdb/instances.d/instance1.conf
