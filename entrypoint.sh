@@ -3,6 +3,8 @@
 #start rabbitmq
 service rabbitmq-server start; 
 rabbitmqctl add_vhost test;
+rabbitmqctl set_permissions -p test guest ".*" ".*" ".*"
+
 
 #start rethinkdb
 /etc/init.d/rethinkdb restart
