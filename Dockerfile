@@ -1,4 +1,4 @@
-FROM node:8.4
+FROM node:9.2
 
 #install rethinkdb rabbitmq yarn
 RUN echo "deb http://download.rethinkdb.com/apt jessie main" | tee /etc/apt/sources.list.d/rethinkdb.list && \
