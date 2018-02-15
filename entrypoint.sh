@@ -1,13 +1,13 @@
 #!/bin/bash
 
+#start rethinkdb
+/etc/init.d/rethinkdb restart
+
 #start rabbitmq
 service rabbitmq-server start; 
 rabbitmqctl add_vhost test;
 rabbitmqctl set_permissions -p test guest ".*" ".*" ".*"
 
-
-#start rethinkdb
-/etc/init.d/rethinkdb restart
 
 #start redis
 service redis-server start
